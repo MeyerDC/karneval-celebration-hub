@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Countdown from "./Countdown";
 import { Sparkles, Calendar, MapPin } from "lucide-react";
-import dcvLogo from "@/assets/dcv-logo.png";
+import heroLogo from "@/assets/hero-logo.jpg";
 
 const Hero = () => {
   return (
@@ -32,8 +32,8 @@ const Hero = () => {
           <div className="absolute inset-0 w-[520px] h-[520px] mx-auto bg-secondary/30 rounded-full blur-3xl" />
           <div className="relative w-[520px] h-[520px] mx-auto bg-card rounded-full shadow-festival flex items-center justify-center border-4 border-secondary/50 animate-pulse-glow">
             <img 
-              src={dcvLogo} 
-              alt="Deutsche Carneval Verein Logo" 
+              src={heroLogo} 
+              alt="Deutsche Carneval Verein 40 Jahre Logo" 
               className="w-[500px] h-[500px] object-contain drop-shadow-lg"
             />
           </div>
