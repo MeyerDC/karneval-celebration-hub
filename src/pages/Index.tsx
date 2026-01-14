@@ -2,6 +2,7 @@ import Confetti from "@/components/Confetti";
 import Hero from "@/components/Hero";
 import Highlights from "@/components/Highlights";
 import Schedule from "@/components/Schedule";
+import Sponsors from "@/components/Sponsors";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -11,6 +12,7 @@ const Index = () => {
       <Hero />
       <Highlights />
       <Schedule />
+      <Sponsors />
       <Footer />
     </div>
   );
