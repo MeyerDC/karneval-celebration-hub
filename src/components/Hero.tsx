@@ -72,8 +72,8 @@ const Hero = () => {
 
         {/* CTA Button */}
         <div className="flex flex-wrap justify-center gap-4 mb-16 animate-fade-in" style={{ animationDelay: "0.5s" }}>
-          <Button variant="festival" size="xl">
-            Tickets Sichern
+          <Button variant="festival" size="xl" disabled className="opacity-80">
+            Tickets Coming Soon
           </Button>
         </div>
 
