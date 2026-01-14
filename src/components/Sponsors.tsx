@@ -7,7 +7,7 @@ interface Sponsor {
 }
 
 const sponsors: Sponsor[] = [
-  { name: "Brauerei Müller", logo: "🍺" },
+  { name: "Animal Hospital", logo: "🏥" },
 ];
 
 const pendingSponsors: Sponsor[] = [
