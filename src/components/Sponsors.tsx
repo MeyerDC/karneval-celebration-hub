@@ -7,17 +7,11 @@ interface Sponsor {
 
 const sponsors: Sponsor[] = [
   { name: "Brauerei Müller", logo: "🍺" },
-  { name: "Stadtwerke", logo: "⚡" },
-  { name: "Autohaus Schmidt", logo: "🚗" },
-  { name: "Bäckerei Wagner", logo: "🥨" },
-  { name: "Metzgerei Hoffmann", logo: "🥩" },
-  { name: "Blumen Schneider", logo: "🌸" },
-  { name: "Café Central", logo: "☕" },
-  { name: "Druckerei Weber", logo: "🖨️" },
-  { name: "Optik Meyer", logo: "👓" },
-  { name: "Apotheke am Markt", logo: "💊" },
-  { name: "Sporthaus Fritz", logo: "⚽" },
-  { name: "Modehaus Klein", logo: "👗" },
+];
+
+const pendingSponsors: Sponsor[] = [
+  { name: "Sponsor 2", logo: "🤝" },
+  { name: "Sponsor 3", logo: "🤝" },
 ];
 
 const Sponsors = () => {
@@ -34,8 +28,8 @@ const Sponsors = () => {
           </p>
         </div>
 
-        {/* Sponsors Grid with Logos */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-16">
+        {/* Current Sponsors */}
+        <div className="flex flex-wrap justify-center gap-8 mb-12">
           {sponsors.map((sponsor, index) => (
             <div
               key={sponsor.name}
@@ -50,6 +44,27 @@ const Sponsors = () => {
               </span>
             </div>
           ))}
+        </div>
+
+        {/* Pending Sponsors */}
+        <div className="text-center mb-12">
+          <p className="text-muted-foreground text-sm uppercase tracking-wider mb-6">Weitere Partner folgen</p>
+          <div className="flex flex-wrap justify-center gap-6">
+            {pendingSponsors.map((sponsor, index) => (
+              <div
+                key={sponsor.name}
+                className="bg-muted/30 rounded-xl p-6 flex flex-col items-center justify-center gap-4 border border-dashed border-border min-w-[200px] min-h-[200px] opacity-60"
+                style={{ animationDelay: `${index * 0.05}s` }}
+              >
+                <div className="w-24 h-24 md:w-28 md:h-28 bg-muted/50 rounded-xl flex items-center justify-center text-4xl md:text-5xl">
+                  {sponsor.logo}
+                </div>
+                <span className="font-medium text-sm md:text-base text-muted-foreground text-center">
+                  Demnächst
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Acknowledgment */}
