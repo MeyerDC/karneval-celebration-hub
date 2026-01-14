@@ -16,8 +16,8 @@ const highlights = [
   {
     icon: <Users className="w-8 h-8" />,
     title: "Gemeinschaft",
-    subtitle: "& Familie",
-    description: "Ein Fest für Jung und Alt, vereint in Freude",
+    subtitle: "& Freunde",
+    description: "Gemeinsam feiern, vereint in Freude",
   },
   {
     icon: <Award className="w-8 h-8" />,
