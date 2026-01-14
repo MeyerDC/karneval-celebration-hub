@@ -2,8 +2,11 @@ import { Button } from "@/components/ui/button";
 import Countdown from "./Countdown";
 import { Sparkles, Calendar, MapPin } from "lucide-react";
 import heroLogo from "@/assets/hero-logo.png";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20 overflow-hidden">
       {/* Background Pattern */}
@@ -42,7 +45,7 @@ const Hero = () => {
         {/* Anniversary Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/20 rounded-full mb-8 animate-scale-in" style={{ animationDelay: "0.1s" }}>
           <Sparkles className="w-5 h-5 text-secondary" />
-          <span className="font-semibold text-secondary">40 Jahre Jubiläum</span>
+          <span className="font-semibold text-secondary">{t("hero.anniversary")}</span>
           <Sparkles className="w-5 h-5 text-secondary" />
         </div>
 
@@ -55,14 +58,14 @@ const Hero = () => {
 
         {/* Subtitle */}
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.3s" }}>
-          Feiern Sie mit uns vier Jahrzehnte Tradition, Freude und Gemeinschaft
+          {t("hero.subtitle")}
         </p>
 
         {/* Event Details */}
         <div className="flex flex-wrap justify-center gap-6 mb-12 animate-fade-in" style={{ animationDelay: "0.4s" }}>
           <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-full shadow-card">
             <Calendar className="w-5 h-5 text-primary" />
-            <span className="font-medium">13. - 14. Februar 2026</span>
+            <span className="font-medium">13. - 14. February 2026</span>
           </div>
           <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-full shadow-card">
             <MapPin className="w-5 h-5 text-primary" />
@@ -73,14 +76,14 @@ const Hero = () => {
         {/* CTA Button */}
         <div className="flex flex-wrap justify-center gap-4 mb-16 animate-fade-in" style={{ animationDelay: "0.5s" }}>
           <Button variant="festival" size="xl" disabled className="opacity-80">
-            Tickets Coming Soon
+            {t("hero.tickets")}
           </Button>
         </div>
 
         {/* Countdown */}
         <div className="animate-fade-in" style={{ animationDelay: "0.6s" }}>
           <p className="text-muted-foreground mb-6 uppercase tracking-widest text-sm">
-            Countdown zum Fest
+            {t("hero.countdown")}
           </p>
           <Countdown />
         </div>

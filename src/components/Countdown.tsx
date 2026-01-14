@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface TimeLeft {
   days: number;
@@ -8,6 +9,7 @@ interface TimeLeft {
 }
 
 const Countdown = () => {
+  const { t } = useLanguage();
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
@@ -34,17 +36,17 @@ const Countdown = () => {
   }, []);
 
   const timeBlocks = [
-    { value: timeLeft.days, label: "Tage" },
-    { value: timeLeft.hours, label: "Stunden" },
-    { value: timeLeft.minutes, label: "Minuten" },
-    { value: timeLeft.seconds, label: "Sekunden" },
+    { value: timeLeft.days, label: t("countdown.days") },
+    { value: timeLeft.hours, label: t("countdown.hours") },
+    { value: timeLeft.minutes, label: t("countdown.minutes") },
+    { value: timeLeft.seconds, label: t("countdown.seconds") },
   ];
 
   return (
     <div className="flex flex-wrap justify-center gap-4 md:gap-6">
       {timeBlocks.map((block, index) => (
         <div
-          key={block.label}
+          key={index}
           className="flex flex-col items-center animate-fade-in"
           style={{ animationDelay: `${index * 0.1}s` }}
         >

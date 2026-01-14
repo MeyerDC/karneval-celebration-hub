@@ -1,7 +1,10 @@
 import { Heart, Mail, MapPin, Instagram, Facebook } from "lucide-react";
 import dcvLogo from "@/assets/dcv-logo.png";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-festival-black text-festival-cream py-16 px-4">
       <div className="max-w-6xl mx-auto">
@@ -15,11 +18,11 @@ const Footer = () => {
               </h3>
             </div>
             <p className="text-festival-cream/70 mb-4">
-              Seit 1986 bringen wir Freude und Gemeinschaft durch traditionellen deutschen Karneval zusammen.
+              {t("footer.about")}
             </p>
             <div className="flex items-center gap-2 text-secondary mb-4">
               <Heart className="w-4 h-4 fill-current" />
-              <span className="text-sm">40 Jahre Tradition</span>
+              <span className="text-sm">{t("footer.tradition")}</span>
             </div>
             <div className="flex items-center gap-4">
               <a 
@@ -43,7 +46,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-display text-xl mb-4">Kontakt</h4>
+            <h4 className="font-display text-xl mb-4">{t("footer.contact")}</h4>
             <div className="space-y-3">
               <a href="mailto:contact@dcvpretoria.co.za" className="flex items-center gap-3 text-festival-cream/70 hover:text-secondary transition-colors">
                 <Mail className="w-5 h-5" />
@@ -57,7 +60,7 @@ const Footer = () => {
                 </span>
               </div>
             </div>
-            <h4 className="font-display text-xl mt-6 mb-2">Venue</h4>
+            <h4 className="font-display text-xl mt-6 mb-2">{t("footer.venue")}</h4>
             <p className="text-festival-cream/70">
               Deutsche Internationale Schule Pretoria (DSP)
             </p>
@@ -67,7 +70,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-festival-cream/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-festival-cream/50 text-sm">
-            © 2026 Deutsche Carneval Verein. Alle Rechte vorbehalten.
+            © 2026 Deutsche Carneval Verein. {t("footer.rights")}
           </p>
           <div className="flex items-center gap-2">
             <span className="w-4 h-4 bg-festival-black border border-festival-cream/30" />

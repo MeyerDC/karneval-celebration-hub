@@ -1,62 +1,52 @@
-import { Calendar, Clock, Music, Users, Utensils, PartyPopper } from "lucide-react";
-
-interface ScheduleEvent {
-  time: string;
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-}
-
-interface DaySchedule {
-  date: string;
-  day: string;
-  events: ScheduleEvent[];
-}
-
-const schedule: DaySchedule[] = [
-  {
-    date: "13. Februar",
-    day: "Freitag",
-    events: [
-      {
-        time: "18:30",
-        title: "Büttenabend",
-        description: "German Evening – Einlass 18:30, Beginn 19:00",
-        icon: <Music className="w-5 h-5" />,
-      },
-    ],
-  },
-  {
-    date: "14. Februar",
-    day: "Samstag",
-    events: [
-      {
-        time: "18:30",
-        title: "International Evening",
-        description: "Internationale Feier – Einlass 18:30, Beginn 19:00",
-        icon: <PartyPopper className="w-5 h-5" />,
-      },
-    ],
-  },
-];
+import { Calendar, Clock, Music, PartyPopper } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Schedule = () => {
+  const { t } = useLanguage();
+
+  const schedule = [
+    {
+      date: t("schedule.feb13"),
+      day: t("schedule.friday"),
+      events: [
+        {
+          time: "18:30",
+          title: t("schedule.buettenabend"),
+          description: t("schedule.buettenabend.desc"),
+          icon: <Music className="w-5 h-5" />,
+        },
+      ],
+    },
+    {
+      date: t("schedule.feb14"),
+      day: t("schedule.saturday"),
+      events: [
+        {
+          time: "18:30",
+          title: t("schedule.international"),
+          description: t("schedule.international.desc"),
+          icon: <PartyPopper className="w-5 h-5" />,
+        },
+      ],
+    },
+  ];
+
   return (
     <section className="py-20 px-4 bg-muted/50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-display text-5xl md:text-6xl text-foreground mb-4">
-            Programm
+            {t("schedule.title")}
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Zwei Tage voller Freude, Musik und unvergesslicher Momente
+            {t("schedule.subtitle")}
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {schedule.map((day, dayIndex) => (
             <div
-              key={day.date}
+              key={dayIndex}
               className="bg-card rounded-2xl shadow-card p-6 md:p-8 animate-fade-in"
               style={{ animationDelay: `${dayIndex * 0.2}s` }}
             >
@@ -73,7 +63,7 @@ const Schedule = () => {
               <div className="space-y-4">
                 {day.events.map((event, eventIndex) => (
                   <div
-                    key={event.time}
+                    key={eventIndex}
                     className="flex gap-4 p-4 rounded-xl hover:bg-muted/50 transition-colors group"
                   >
                     <div className="flex flex-col items-center">
@@ -87,7 +77,7 @@ const Schedule = () => {
                     <div className="flex-1">
                       <div className="flex items-center gap-2 text-sm text-muted-foreground mb-1">
                         <Clock className="w-4 h-4" />
-                        {event.time} Uhr
+                        {event.time} {t("schedule.time")}
                       </div>
                       <h4 className="font-semibold text-foreground">{event.title}</h4>
                       <p className="text-sm text-muted-foreground">{event.description}</p>
