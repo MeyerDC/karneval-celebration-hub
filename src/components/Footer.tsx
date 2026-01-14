@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-festival-black text-festival-cream py-16 px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="grid md:grid-cols-2 gap-12 mb-12">
           {/* Logo & About */}
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -61,22 +61,6 @@ const Footer = () => {
             <p className="text-festival-cream/70">
               Deutsche Internationale Schule Pretoria (DSP)
             </p>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-display text-xl mb-4">Links</h4>
-            <div className="space-y-2">
-              {["Über Uns", "Veranstaltungen", "Mitgliedschaft", "Galerie", "Kontakt"].map((link) => (
-                <a
-                  key={link}
-                  href="#"
-                  className="block text-festival-cream/70 hover:text-secondary transition-colors"
-                >
-                  {link}
-                </a>
-              ))}
-            </div>
           </div>
         </div>
 
