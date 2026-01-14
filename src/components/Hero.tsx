@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Countdown from "./Countdown";
 import { Sparkles, Calendar, MapPin } from "lucide-react";
-import heroLogo from "@/assets/hero-logo.jpg";
+import heroLogo from "@/assets/hero-logo.png";
 
 const Hero = () => {
   return (
