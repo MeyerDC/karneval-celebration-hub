@@ -1,42 +1,21 @@
 import { Heart } from "lucide-react";
 
-interface Sponsor {
-  name: string;
-  tier: "gold" | "silver" | "bronze";
-}
-
-const sponsors: Sponsor[] = [
-  { name: "Brauerei Müller", tier: "gold" },
-  { name: "Stadtwerke", tier: "gold" },
-  { name: "Autohaus Schmidt", tier: "gold" },
-  { name: "Bäckerei Wagner", tier: "silver" },
-  { name: "Metzgerei Hoffmann", tier: "silver" },
-  { name: "Blumen Schneider", tier: "silver" },
-  { name: "Café Central", tier: "silver" },
-  { name: "Druckerei Weber", tier: "bronze" },
-  { name: "Optik Meyer", tier: "bronze" },
-  { name: "Apotheke am Markt", tier: "bronze" },
-  { name: "Sporthaus Fritz", tier: "bronze" },
-  { name: "Modehaus Klein", tier: "bronze" },
+const sponsors = [
+  "Brauerei Müller",
+  "Stadtwerke",
+  "Autohaus Schmidt",
+  "Bäckerei Wagner",
+  "Metzgerei Hoffmann",
+  "Blumen Schneider",
+  "Café Central",
+  "Druckerei Weber",
+  "Optik Meyer",
+  "Apotheke am Markt",
+  "Sporthaus Fritz",
+  "Modehaus Klein",
 ];
 
-const tierStyles = {
-  gold: "bg-gradient-to-br from-yellow-400 via-yellow-500 to-amber-600 text-festival-black",
-  silver: "bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 text-festival-black",
-  bronze: "bg-gradient-to-br from-amber-600 via-amber-700 to-amber-800 text-festival-cream",
-};
-
-const tierSizes = {
-  gold: "col-span-2 row-span-2 text-2xl md:text-3xl p-8",
-  silver: "col-span-1 row-span-1 text-lg md:text-xl p-6",
-  bronze: "col-span-1 row-span-1 text-base p-4",
-};
-
 const Sponsors = () => {
-  const goldSponsors = sponsors.filter((s) => s.tier === "gold");
-  const silverSponsors = sponsors.filter((s) => s.tier === "silver");
-  const bronzeSponsors = sponsors.filter((s) => s.tier === "bronze");
-
   return (
     <section className="py-20 px-4 bg-background">
       <div className="max-w-6xl mx-auto">
@@ -50,68 +29,21 @@ const Sponsors = () => {
           </p>
         </div>
 
-        {/* Gold Sponsors */}
-        <div className="mb-12">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="h-px flex-1 max-w-20 bg-gradient-to-r from-transparent to-yellow-500" />
-            <span className="font-display text-xl text-secondary uppercase tracking-widest">Gold Partner</span>
-            <div className="h-px flex-1 max-w-20 bg-gradient-to-l from-transparent to-yellow-500" />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {goldSponsors.map((sponsor, index) => (
-              <div
-                key={sponsor.name}
-                className={`${tierStyles.gold} rounded-2xl flex items-center justify-center font-display text-2xl md:text-3xl p-8 shadow-lg hover:scale-105 transition-transform duration-300 animate-fade-in`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {sponsor.name}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Silver Sponsors */}
-        <div className="mb-12">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="h-px flex-1 max-w-20 bg-gradient-to-r from-transparent to-gray-400" />
-            <span className="font-display text-lg text-muted-foreground uppercase tracking-widest">Silber Partner</span>
-            <div className="h-px flex-1 max-w-20 bg-gradient-to-l from-transparent to-gray-400" />
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {silverSponsors.map((sponsor, index) => (
-              <div
-                key={sponsor.name}
-                className={`${tierStyles.silver} rounded-xl flex items-center justify-center font-display text-lg md:text-xl p-6 shadow-md hover:scale-105 transition-transform duration-300 animate-fade-in`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {sponsor.name}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Bronze Sponsors */}
-        <div className="mb-16">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="h-px flex-1 max-w-20 bg-gradient-to-r from-transparent to-amber-700" />
-            <span className="font-display text-lg text-muted-foreground uppercase tracking-widest">Bronze Partner</span>
-            <div className="h-px flex-1 max-w-20 bg-gradient-to-l from-transparent to-amber-700" />
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-            {bronzeSponsors.map((sponsor, index) => (
-              <div
-                key={sponsor.name}
-                className={`${tierStyles.bronze} rounded-lg flex items-center justify-center font-display text-base p-4 shadow hover:scale-105 transition-transform duration-300 animate-fade-in`}
-                style={{ animationDelay: `${index * 0.05}s` }}
-              >
-                {sponsor.name}
-              </div>
-            ))}
-          </div>
+        {/* Sponsors Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-16">
+          {sponsors.map((sponsor, index) => (
+            <div
+              key={sponsor}
+              className="bg-card rounded-xl p-6 shadow-card flex items-center justify-center font-display text-lg md:text-xl text-foreground hover:scale-105 hover:shadow-festival transition-all duration-300 animate-fade-in border border-border"
+              style={{ animationDelay: `${index * 0.05}s` }}
+            >
+              {sponsor}
+            </div>
+          ))}
         </div>
 
         {/* Acknowledgment */}
-        <div className="text-center bg-card rounded-2xl shadow-card p-8 md:p-12">
+        <div className="text-center bg-card rounded-2xl shadow-card p-8 md:p-12 border border-border">
           <Heart className="w-10 h-10 text-primary mx-auto mb-4 fill-primary/20" />
           <h3 className="font-display text-2xl md:text-3xl text-foreground mb-4">
             Gemeinsam Feiern
