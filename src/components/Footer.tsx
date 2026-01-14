@@ -1,4 +1,4 @@
-import { Heart, Mail, MapPin } from "lucide-react";
+import { Heart, Mail, MapPin, Instagram, Facebook } from "lucide-react";
 import dcvLogo from "@/assets/dcv-logo.png";
 
 const Footer = () => {
@@ -17,9 +17,27 @@ const Footer = () => {
             <p className="text-festival-cream/70 mb-4">
               Seit 1986 bringen wir Freude und Gemeinschaft durch traditionellen deutschen Karneval zusammen.
             </p>
-            <div className="flex items-center gap-2 text-secondary">
+            <div className="flex items-center gap-2 text-secondary mb-4">
               <Heart className="w-4 h-4 fill-current" />
               <span className="text-sm">40 Jahre Tradition</span>
+            </div>
+            <div className="flex items-center gap-4">
+              <a 
+                href="https://instagram.com/dcv.pretoria" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-festival-cream/70 hover:text-secondary transition-colors"
+              >
+                <Instagram className="w-6 h-6" />
+              </a>
+              <a 
+                href="https://facebook.com/DCVPretoria" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-festival-cream/70 hover:text-secondary transition-colors"
+              >
+                <Facebook className="w-6 h-6" />
+              </a>
             </div>
           </div>
 
