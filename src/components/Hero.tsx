@@ -29,12 +29,12 @@ const Hero = () => {
       <div className="relative z-20 max-w-5xl mx-auto text-center">
         {/* Logo */}
         <div className="mb-10 animate-scale-in relative">
-          <div className="absolute inset-0 w-[500px] h-[500px] mx-auto bg-secondary/30 rounded-full blur-3xl" />
-          <div className="relative w-[500px] h-[500px] mx-auto bg-card rounded-full shadow-festival flex items-center justify-center border-4 border-secondary/50 animate-pulse-glow">
+          <div className="absolute inset-0 w-[520px] h-[520px] mx-auto bg-secondary/30 rounded-full blur-3xl" />
+          <div className="relative w-[520px] h-[520px] mx-auto bg-card rounded-full shadow-festival flex items-center justify-center border-4 border-secondary/50 animate-pulse-glow">
             <img 
               src={dcvLogo} 
               alt="Deutsche Carneval Verein Logo" 
-              className="w-[400px] h-[400px] object-contain drop-shadow-lg"
+              className="w-[500px] h-[500px] object-contain drop-shadow-lg"
             />
           </div>
         </div>
