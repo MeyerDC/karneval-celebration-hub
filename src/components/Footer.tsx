@@ -1,4 +1,5 @@
 import { Heart, Mail, Phone, MapPin } from "lucide-react";
+import dcvLogo from "@/assets/dcv-logo.png";
 
 const Footer = () => {
   return (
@@ -7,9 +8,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Logo & About */}
           <div>
-            <h3 className="font-display text-3xl text-secondary mb-4">
-              Deutsche Carneval Verein
-            </h3>
+            <div className="flex items-center gap-3 mb-4">
+              <img src={dcvLogo} alt="DCV Logo" className="w-12 h-12 object-contain" />
+              <h3 className="font-display text-2xl text-secondary">
+                Deutsche Carneval Verein
+              </h3>
+            </div>
             <p className="text-festival-cream/70 mb-4">
               Seit 1986 bringen wir Freude und Gemeinschaft durch traditionellen deutschen Karneval zusammen.
             </p>
