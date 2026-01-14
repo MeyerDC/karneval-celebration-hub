@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Countdown from "./Countdown";
 import { Sparkles, Calendar, MapPin } from "lucide-react";
+import dcvLogo from "@/assets/dcv-logo.png";
 
 const Hero = () => {
   return (
@@ -26,27 +27,36 @@ const Hero = () => {
       <div className="absolute bottom-20 right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }} />
 
       <div className="relative z-20 max-w-5xl mx-auto text-center">
+        {/* Logo */}
+        <div className="mb-8 animate-scale-in">
+          <img 
+            src={dcvLogo} 
+            alt="Deutsche Carneval Verein Logo" 
+            className="w-32 h-32 md:w-40 md:h-40 mx-auto object-contain"
+          />
+        </div>
+
         {/* Anniversary Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/20 rounded-full mb-8 animate-scale-in">
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/20 rounded-full mb-8 animate-scale-in" style={{ animationDelay: "0.1s" }}>
           <Sparkles className="w-5 h-5 text-secondary" />
           <span className="font-semibold text-secondary">40 Jahre Jubiläum</span>
           <Sparkles className="w-5 h-5 text-secondary" />
         </div>
 
         {/* Main Title */}
-        <h1 className="font-display text-6xl md:text-8xl lg:text-9xl leading-none mb-6 animate-fade-in">
+        <h1 className="font-display text-6xl md:text-8xl lg:text-9xl leading-none mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
           <span className="text-foreground">Deutsche</span>
           <br />
           <span className="text-gradient-festival">Carneval Verein</span>
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
+        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.3s" }}>
           Feiern Sie mit uns vier Jahrzehnte Tradition, Freude und Gemeinschaft
         </p>
 
         {/* Event Details */}
-        <div className="flex flex-wrap justify-center gap-6 mb-12 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+        <div className="flex flex-wrap justify-center gap-6 mb-12 animate-fade-in" style={{ animationDelay: "0.4s" }}>
           <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-full shadow-card">
             <Calendar className="w-5 h-5 text-primary" />
             <span className="font-medium">13. - 14. Februar 2026</span>
@@ -58,7 +68,7 @@ const Hero = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+        <div className="flex flex-wrap justify-center gap-4 mb-16 animate-fade-in" style={{ animationDelay: "0.5s" }}>
           <Button variant="festival" size="xl">
             Tickets Sichern
           </Button>
@@ -68,7 +78,7 @@ const Hero = () => {
         </div>
 
         {/* Countdown */}
-        <div className="animate-fade-in" style={{ animationDelay: "0.5s" }}>
+        <div className="animate-fade-in" style={{ animationDelay: "0.6s" }}>
           <p className="text-muted-foreground mb-6 uppercase tracking-widest text-sm">
             Countdown zum Fest
           </p>

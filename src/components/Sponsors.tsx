@@ -1,18 +1,23 @@
 import { Heart } from "lucide-react";
 
-const sponsors = [
-  "Brauerei Müller",
-  "Stadtwerke",
-  "Autohaus Schmidt",
-  "Bäckerei Wagner",
-  "Metzgerei Hoffmann",
-  "Blumen Schneider",
-  "Café Central",
-  "Druckerei Weber",
-  "Optik Meyer",
-  "Apotheke am Markt",
-  "Sporthaus Fritz",
-  "Modehaus Klein",
+interface Sponsor {
+  name: string;
+  logo: string;
+}
+
+const sponsors: Sponsor[] = [
+  { name: "Brauerei Müller", logo: "🍺" },
+  { name: "Stadtwerke", logo: "⚡" },
+  { name: "Autohaus Schmidt", logo: "🚗" },
+  { name: "Bäckerei Wagner", logo: "🥨" },
+  { name: "Metzgerei Hoffmann", logo: "🥩" },
+  { name: "Blumen Schneider", logo: "🌸" },
+  { name: "Café Central", logo: "☕" },
+  { name: "Druckerei Weber", logo: "🖨️" },
+  { name: "Optik Meyer", logo: "👓" },
+  { name: "Apotheke am Markt", logo: "💊" },
+  { name: "Sporthaus Fritz", logo: "⚽" },
+  { name: "Modehaus Klein", logo: "👗" },
 ];
 
 const Sponsors = () => {
@@ -29,15 +34,20 @@ const Sponsors = () => {
           </p>
         </div>
 
-        {/* Sponsors Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-16">
+        {/* Sponsors Grid with Logos */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16">
           {sponsors.map((sponsor, index) => (
             <div
-              key={sponsor}
-              className="bg-card rounded-xl p-6 shadow-card flex items-center justify-center font-display text-lg md:text-xl text-foreground hover:scale-105 hover:shadow-festival transition-all duration-300 animate-fade-in border border-border"
+              key={sponsor.name}
+              className="bg-card rounded-xl p-6 shadow-card flex flex-col items-center justify-center gap-3 hover:scale-105 hover:shadow-festival transition-all duration-300 animate-fade-in border border-border aspect-square"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
-              {sponsor}
+              <div className="w-16 h-16 md:w-20 md:h-20 bg-muted rounded-xl flex items-center justify-center text-3xl md:text-4xl">
+                {sponsor.logo}
+              </div>
+              <span className="font-medium text-sm md:text-base text-foreground text-center">
+                {sponsor.name}
+              </span>
             </div>
           ))}
         </div>
