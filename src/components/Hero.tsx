@@ -66,7 +66,7 @@ const Hero = () => {
           </div>
           <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-full shadow-card">
             <MapPin className="w-5 h-5 text-primary" />
-            <span className="font-medium">Festsaal</span>
+            <span className="font-medium">Deutsche Internationale Schule Pretoria (DSP)</span>
           </div>
         </div>
 
