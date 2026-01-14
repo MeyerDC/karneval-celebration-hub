@@ -35,14 +35,14 @@ const Sponsors = () => {
         </div>
 
         {/* Sponsors Grid with Logos */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-16">
           {sponsors.map((sponsor, index) => (
             <div
               key={sponsor.name}
-              className="bg-card rounded-xl p-6 shadow-card flex flex-col items-center justify-center gap-3 hover:scale-105 hover:shadow-festival transition-all duration-300 animate-fade-in border border-border aspect-square"
+              className="bg-card rounded-xl p-6 shadow-card flex flex-col items-center justify-center gap-4 hover:scale-105 hover:shadow-festival transition-all duration-300 animate-fade-in border border-border min-w-[200px] min-h-[200px]"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
-              <div className="w-16 h-16 md:w-20 md:h-20 bg-muted rounded-xl flex items-center justify-center text-3xl md:text-4xl">
+              <div className="w-24 h-24 md:w-28 md:h-28 bg-muted rounded-xl flex items-center justify-center text-4xl md:text-5xl">
                 {sponsor.logo}
               </div>
               <span className="font-medium text-sm md:text-base text-foreground text-center">
@@ -64,7 +64,7 @@ const Sponsors = () => {
           </p>
           <p className="text-sm text-muted-foreground">
             Interesse an einer Partnerschaft?{" "}
-            <a href="mailto:sponsoring@deutsche-carneval.de" className="text-primary hover:underline font-medium">
+            <a href="mailto:contact@dcvpretoria.co.za" className="text-primary hover:underline font-medium">
               Kontaktieren Sie uns
             </a>
           </p>

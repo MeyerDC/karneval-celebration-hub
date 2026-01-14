@@ -29,12 +29,12 @@ const Hero = () => {
       <div className="relative z-20 max-w-5xl mx-auto text-center">
         {/* Logo */}
         <div className="mb-10 animate-scale-in relative">
-          <div className="absolute inset-0 w-48 h-48 md:w-64 md:h-64 mx-auto bg-secondary/30 rounded-full blur-3xl" />
-          <div className="relative w-48 h-48 md:w-64 md:h-64 mx-auto bg-card rounded-full shadow-festival flex items-center justify-center border-4 border-secondary/50 animate-pulse-glow">
+          <div className="absolute inset-0 w-[500px] h-[500px] mx-auto bg-secondary/30 rounded-full blur-3xl" />
+          <div className="relative w-[500px] h-[500px] mx-auto bg-card rounded-full shadow-festival flex items-center justify-center border-4 border-secondary/50 animate-pulse-glow">
             <img 
               src={dcvLogo} 
               alt="Deutsche Carneval Verein Logo" 
-              className="w-36 h-36 md:w-48 md:h-48 object-contain drop-shadow-lg"
+              className="w-[400px] h-[400px] object-contain drop-shadow-lg"
             />
           </div>
         </div>
@@ -70,13 +70,10 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* CTA Buttons */}
+        {/* CTA Button */}
         <div className="flex flex-wrap justify-center gap-4 mb-16 animate-fade-in" style={{ animationDelay: "0.5s" }}>
           <Button variant="festival" size="xl">
             Tickets Sichern
-          </Button>
-          <Button variant="festivalOutline" size="xl">
-            Mehr Erfahren
           </Button>
         </div>
 
