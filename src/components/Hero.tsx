@@ -28,12 +28,15 @@ const Hero = () => {
 
       <div className="relative z-20 max-w-5xl mx-auto text-center">
         {/* Logo */}
-        <div className="mb-8 animate-scale-in">
-          <img 
-            src={dcvLogo} 
-            alt="Deutsche Carneval Verein Logo" 
-            className="w-32 h-32 md:w-40 md:h-40 mx-auto object-contain"
-          />
+        <div className="mb-10 animate-scale-in relative">
+          <div className="absolute inset-0 w-48 h-48 md:w-64 md:h-64 mx-auto bg-secondary/30 rounded-full blur-3xl" />
+          <div className="relative w-48 h-48 md:w-64 md:h-64 mx-auto bg-card rounded-full shadow-festival flex items-center justify-center border-4 border-secondary/50 animate-pulse-glow">
+            <img 
+              src={dcvLogo} 
+              alt="Deutsche Carneval Verein Logo" 
+              className="w-36 h-36 md:w-48 md:h-48 object-contain drop-shadow-lg"
+            />
+          </div>
         </div>
 
         {/* Anniversary Badge */}
