@@ -1,4 +1,4 @@
-import { Heart, Mail, Phone, MapPin } from "lucide-react";
+import { Heart, Mail, MapPin } from "lucide-react";
 import dcvLogo from "@/assets/dcv-logo.png";
 
 const Footer = () => {
@@ -27,22 +27,22 @@ const Footer = () => {
           <div>
             <h4 className="font-display text-xl mb-4">Kontakt</h4>
             <div className="space-y-3">
-              <a href="mailto:info@deutsche-carneval.de" className="flex items-center gap-3 text-festival-cream/70 hover:text-secondary transition-colors">
+              <a href="mailto:contact@dcvpretoria.co.za" className="flex items-center gap-3 text-festival-cream/70 hover:text-secondary transition-colors">
                 <Mail className="w-5 h-5" />
-                info@deutsche-carneval.de
-              </a>
-              <a href="tel:+4912345678" className="flex items-center gap-3 text-festival-cream/70 hover:text-secondary transition-colors">
-                <Phone className="w-5 h-5" />
-                +49 123 456 78
+                contact@dcvpretoria.co.za
               </a>
               <div className="flex items-start gap-3 text-festival-cream/70">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
                 <span>
-                  Festsaalstraße 1<br />
-                  12345 Musterstadt
+                  Simon Vermooten Rd, The Willows,<br />
+                  Pretoria, 0041
                 </span>
               </div>
             </div>
+            <h4 className="font-display text-xl mt-6 mb-2">Venue</h4>
+            <p className="text-festival-cream/70">
+              Deutsche Internationale Schule Pretoria (DSP)
+            </p>
           </div>
 
           {/* Quick Links */}
