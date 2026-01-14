@@ -19,28 +19,10 @@ const schedule: DaySchedule[] = [
     day: "Freitag",
     events: [
       {
-        time: "18:00",
-        title: "Einlass & Empfang",
-        description: "Willkommensgetränk und erste Begegnungen",
-        icon: <Users className="w-5 h-5" />,
-      },
-      {
-        time: "19:00",
-        title: "Eröffnungszeremonie",
-        description: "40 Jahre Deutsche Carneval Verein",
-        icon: <PartyPopper className="w-5 h-5" />,
-      },
-      {
-        time: "20:00",
-        title: "Live-Musik & Tanz",
-        description: "Traditionelle Karnevalsmusik",
+        time: "18:30",
+        title: "Büttenabend",
+        description: "German Evening – Einlass 18:30, Beginn 19:00",
         icon: <Music className="w-5 h-5" />,
-      },
-      {
-        time: "22:00",
-        title: "Festbuffet",
-        description: "Kulinarische Köstlichkeiten",
-        icon: <Utensils className="w-5 h-5" />,
       },
     ],
   },
@@ -49,27 +31,9 @@ const schedule: DaySchedule[] = [
     day: "Samstag",
     events: [
       {
-        time: "14:00",
-        title: "Kinderkarneval",
-        description: "Spaß und Spiele für die Kleinen",
-        icon: <PartyPopper className="w-5 h-5" />,
-      },
-      {
-        time: "17:00",
-        title: "Kostümwettbewerb",
-        description: "Die schönsten Verkleidungen",
-        icon: <Users className="w-5 h-5" />,
-      },
-      {
-        time: "19:00",
-        title: "Große Karnevalsgala",
-        description: "Höhepunkt des Jubiläums",
-        icon: <Music className="w-5 h-5" />,
-      },
-      {
-        time: "23:00",
-        title: "Abschlussfeier",
-        description: "Gemeinsamer Ausklang",
+        time: "18:30",
+        title: "International Evening",
+        description: "Internationale Feier – Einlass 18:30, Beginn 19:00",
         icon: <PartyPopper className="w-5 h-5" />,
       },
     ],
