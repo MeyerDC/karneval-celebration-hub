@@ -52,12 +52,16 @@ const translations: Record<Language, Record<string, string>> = {
     "schedule.time": "Uhr",
     
     // Sponsors
-    "sponsors.title": "Unsere Partner",
-    "sponsors.subtitle": "Ein herzliches Dankeschön an alle Sponsoren und Unterstützer, die dieses Jubiläum ermöglichen",
-    "sponsors.pending": "Weitere Partner folgen",
-    "sponsors.comingSoon": "Demnächst",
+    "sponsors.title": "Werden Sie Partner",
+    "sponsors.subtitle": "Unterstützen Sie unser 40-jähriges Jubiläum und werden Sie Teil der Feierlichkeiten",
+    "sponsors.cta": "Ihr Logo hier",
+    "sponsors.ctaDesc": "Präsentieren Sie Ihr Unternehmen vor unserer Gemeinschaft",
+    "sponsors.benefits": "Vorteile",
+    "sponsors.benefit1": "Logo auf allen Materialien",
+    "sponsors.benefit2": "Erwähnung bei Veranstaltungen",
+    "sponsors.benefit3": "Networking-Möglichkeiten",
     "sponsors.together": "Gemeinsam Feiern",
-    "sponsors.description": "Ohne die großzügige Unterstützung unserer Sponsoren und Partner wäre dieses 40-jährige Jubiläum nicht möglich. Wir danken allen Unternehmen und Einzelpersonen, die uns helfen, die Tradition des deutschen Karnevals am Leben zu erhalten.",
+    "sponsors.description": "Wir suchen lokale Unternehmen und Partner, die uns helfen, die Tradition des deutschen Karnevals am Leben zu erhalten. Werden Sie Teil unseres 40-jährigen Jubiläums!",
     "sponsors.partnership": "Interesse an einer Partnerschaft?",
     "sponsors.contact": "Kontaktieren Sie uns",
     
@@ -111,12 +115,16 @@ const translations: Record<Language, Record<string, string>> = {
     "schedule.time": "",
     
     // Sponsors
-    "sponsors.title": "Our Partners",
-    "sponsors.subtitle": "A heartfelt thank you to all sponsors and supporters who make this anniversary possible",
-    "sponsors.pending": "More partners coming soon",
-    "sponsors.comingSoon": "Coming Soon",
+    "sponsors.title": "Become a Partner",
+    "sponsors.subtitle": "Support our 40th anniversary and become part of the celebration",
+    "sponsors.cta": "Your Logo Here",
+    "sponsors.ctaDesc": "Present your business to our community",
+    "sponsors.benefits": "Benefits",
+    "sponsors.benefit1": "Logo on all materials",
+    "sponsors.benefit2": "Mention at events",
+    "sponsors.benefit3": "Networking opportunities",
     "sponsors.together": "Celebrating Together",
-    "sponsors.description": "Without the generous support of our sponsors and partners, this 40th anniversary would not be possible. We thank all companies and individuals who help us keep the tradition of German carnival alive.",
+    "sponsors.description": "We are looking for local businesses and partners to help us keep the tradition of German carnival alive. Become part of our 40th anniversary celebration!",
     "sponsors.partnership": "Interested in a partnership?",
     "sponsors.contact": "Contact us",
     
