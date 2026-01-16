@@ -52,6 +52,23 @@ const translations: Record<Language, Record<string, string>> = {
     "schedule.international.desc": "Internationale Feier – Einlass 18:30, Beginn 19:00",
     "schedule.time": "Uhr",
     
+    // Event Info
+    "eventInfo.title": "Wichtige Infos",
+    "eventInfo.subtitle": "Alles was Sie für die Veranstaltung wissen müssen",
+    "eventInfo.tickets": "Tickets",
+    "eventInfo.ticketPrice": "R130 pro Person (Vorverkauf)",
+    "eventInfo.ticketDoor": "R150 an der Abendkasse",
+    "eventInfo.prizes": "Preise",
+    "eventInfo.prizesDesc": "Best-Dressed Preise am Samstag",
+    "eventInfo.theme": "Thema: Life begins at 40!",
+    "eventInfo.venue": "Veranstaltungsort",
+    "eventInfo.venueLocation": "DSP Hall",
+    "eventInfo.parking": "Parken",
+    "eventInfo.parkingLocation": "Parkplätze bei DSP",
+    "eventInfo.ageReq": "Altersbeschränkungen",
+    "eventInfo.ageAlcohol": "Alkohol nur für Personen ab 18 Jahren",
+    "eventInfo.ageSupervision": "Unter 18 ohne Begleitung müssen um 23:00 gehen",
+    
     // Sponsors
     "sponsors.title": "Werden Sie Partner",
     "sponsors.subtitle": "Unterstützen Sie unser 40-jähriges Jubiläum und werden Sie Teil der Feierlichkeiten",
@@ -115,6 +132,23 @@ const translations: Record<Language, Record<string, string>> = {
     "schedule.international": "International Evening",
     "schedule.international.desc": "International Celebration – Doors 18:30, Start 19:00",
     "schedule.time": "",
+    
+    // Event Info
+    "eventInfo.title": "Event Info",
+    "eventInfo.subtitle": "Everything you need to know for the event",
+    "eventInfo.tickets": "Tickets",
+    "eventInfo.ticketPrice": "R130 per person (pre-sale)",
+    "eventInfo.ticketDoor": "R150 at the door",
+    "eventInfo.prizes": "Prizes",
+    "eventInfo.prizesDesc": "Best-Dressed prizes on Saturday",
+    "eventInfo.theme": "Theme: Life begins at 40!",
+    "eventInfo.venue": "Venue",
+    "eventInfo.venueLocation": "DSP Hall",
+    "eventInfo.parking": "Parking",
+    "eventInfo.parkingLocation": "Parking available at DSP",
+    "eventInfo.ageReq": "Age Requirements",
+    "eventInfo.ageAlcohol": "Alcohol served to 18+ only",
+    "eventInfo.ageSupervision": "Under 18 without supervision must leave at 23:00",
     
     // Sponsors
     "sponsors.title": "Become a Partner",
