@@ -13,7 +13,8 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero
     "hero.anniversary": "40 Jahre Jubiläum",
     "hero.subtitle": "Feiern Sie mit uns vier Jahrzehnte Tradition, Freude und Gemeinschaft",
-    "hero.tickets": "Tickets Coming Soon",
+    "hero.ticketsFriday": "Freitag Tickets",
+    "hero.ticketsIntl": "Internationaler Abend Tickets",
     "hero.countdown": "Countdown zum Fest",
     
     // Countdown
@@ -76,7 +77,8 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero
     "hero.anniversary": "40th Anniversary",
     "hero.subtitle": "Celebrate with us four decades of tradition, joy, and community",
-    "hero.tickets": "Tickets Coming Soon",
+    "hero.ticketsFriday": "Friday Tickets",
+    "hero.ticketsIntl": "International Abend Tickets",
     "hero.countdown": "Countdown to the Festival",
     
     // Countdown
