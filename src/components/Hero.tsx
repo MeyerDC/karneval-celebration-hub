@@ -73,11 +73,18 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* CTA Button */}
-        <div className="flex flex-wrap justify-center gap-4 mb-10 md:mb-16 animate-fade-in" style={{ animationDelay: "0.5s" }}>
-          <Button variant="festival" size="xl" disabled className="opacity-80 text-sm sm:text-base px-6 sm:px-8">
-            {t("hero.tickets")}
-          </Button>
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 mb-10 md:mb-16 animate-fade-in" style={{ animationDelay: "0.5s" }}>
+          <a href="https://www.howler.co.za/DCV2026Friday" target="_blank" rel="noopener noreferrer">
+            <Button variant="festival" size="xl" className="text-sm sm:text-base px-6 sm:px-8 w-full sm:w-auto">
+              Friday Tickets
+            </Button>
+          </a>
+          <a href="https://www.howler.co.za/DCV2026IntlAbend" target="_blank" rel="noopener noreferrer">
+            <Button variant="festival" size="xl" className="text-sm sm:text-base px-6 sm:px-8 w-full sm:w-auto">
+              International Abend Tickets
+            </Button>
+          </a>
         </div>
 
         {/* Countdown */}
