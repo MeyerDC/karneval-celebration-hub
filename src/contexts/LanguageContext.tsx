@@ -60,7 +60,7 @@ const translations: Record<Language, Record<string, string>> = {
     "eventInfo.ticketDoor": "R150 an der Abendkasse",
     "eventInfo.prizes": "Preise",
     "eventInfo.prizesDesc": "Best-Dressed Preise am Samstag",
-    "eventInfo.theme": "Thema: Life begins at 40!",
+    "eventInfo.theme": "Thema: Mit 40 fängt das Leben an!",
     "eventInfo.venue": "Veranstaltungsort",
     "eventInfo.venueLocation": "DSP Hall",
     "eventInfo.parking": "Parken",
