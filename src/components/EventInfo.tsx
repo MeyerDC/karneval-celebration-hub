@@ -10,7 +10,6 @@ const EventInfo = () => {
       title: t("eventInfo.tickets"),
       details: [
         t("eventInfo.ticketPrice"),
-        t("eventInfo.ticketDoor"),
       ],
     },
     {
