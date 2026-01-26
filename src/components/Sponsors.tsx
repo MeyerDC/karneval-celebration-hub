@@ -1,5 +1,16 @@
-import { Heart, Building2 } from "lucide-react";
+import { Heart, Building2, Phone, Mail } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import bravoplexLogo from "@/assets/sponsors/bravoplex415.jpg";
+
+const sponsors = [
+  {
+    name: "Bravoplex415 (PTY) Ltd",
+    logo: bravoplexLogo,
+    contact: "Hennie de Jager",
+    phone: "079 876 1784",
+    email: "accounts@bravoplex415.co.za",
+  },
+];
 
 const Sponsors = () => {
   const { t } = useLanguage();
@@ -15,6 +26,54 @@ const Sponsors = () => {
           <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto px-2">
             {t("sponsors.subtitle")}
           </p>
+        </div>
+
+        {/* Current Sponsors */}
+        <div className="mb-8 md:mb-12">
+          <h3 className="font-display text-xl sm:text-2xl text-foreground text-center mb-6">
+            {t("sponsors.ourSponsors")}
+          </h3>
+          <p className="text-muted-foreground text-center mb-8">
+            {t("sponsors.thankYou")}
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {sponsors.map((sponsor, index) => (
+              <div
+                key={index}
+                className="bg-card rounded-xl md:rounded-2xl shadow-card p-5 sm:p-6 border border-border hover:shadow-lg transition-shadow"
+              >
+                <div className="flex flex-col items-center text-center">
+                  <img
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                    className="h-16 sm:h-20 object-contain mb-4"
+                  />
+                  <h4 className="font-display text-lg text-foreground mb-2">
+                    {sponsor.name}
+                  </h4>
+                  <p className="text-muted-foreground text-sm mb-3">
+                    {sponsor.contact}
+                  </p>
+                  <div className="flex flex-col gap-2 text-sm">
+                    <a
+                      href={`tel:${sponsor.phone}`}
+                      className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <Phone className="w-4 h-4" />
+                      {sponsor.phone}
+                    </a>
+                    <a
+                      href={`mailto:${sponsor.email}`}
+                      className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <Mail className="w-4 h-4" />
+                      {sponsor.email}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Sponsor Opportunity Card */}
