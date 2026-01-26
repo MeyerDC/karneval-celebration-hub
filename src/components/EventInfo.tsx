@@ -1,17 +1,10 @@
-import { Ticket, Trophy, MapPin, Car, Users } from "lucide-react";
+import { Trophy, MapPin, Car, Users } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const EventInfo = () => {
   const { t } = useLanguage();
 
   const infoItems = [
-    {
-      icon: <Ticket className="w-6 h-6" />,
-      title: t("eventInfo.tickets"),
-      details: [
-        t("eventInfo.ticketPrice"),
-      ],
-    },
     {
       icon: <Trophy className="w-6 h-6" />,
       title: t("eventInfo.prizes"),
