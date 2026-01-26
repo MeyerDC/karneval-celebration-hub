@@ -1,8 +1,24 @@
-import { Heart, Building2, Phone, Mail } from "lucide-react";
+import { useState } from "react";
+import { Heart, Building2, Phone, Mail, User } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import bravoplexLogo from "@/assets/sponsors/bravoplex415.jpg";
 
-const sponsors = [
+interface Sponsor {
+  name: string;
+  logo: string;
+  contact: string;
+  phone: string;
+  email: string;
+  website?: string;
+}
+
+const sponsors: Sponsor[] = [
   {
     name: "Bravoplex415 (PTY) Ltd",
     logo: bravoplexLogo,
@@ -14,6 +30,15 @@ const sponsors = [
 
 const Sponsors = () => {
   const { t } = useLanguage();
+  const [selectedSponsor, setSelectedSponsor] = useState<Sponsor | null>(null);
+
+  const handleSponsorClick = (sponsor: Sponsor) => {
+    if (sponsor.website) {
+      window.open(sponsor.website, "_blank", "noopener,noreferrer");
+    } else {
+      setSelectedSponsor(sponsor);
+    }
+  };
 
   return (
     <section className="py-12 md:py-20 px-4 bg-background">
@@ -36,45 +61,62 @@ const Sponsors = () => {
           <p className="text-muted-foreground text-center mb-8">
             {t("sponsors.thankYou")}
           </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
             {sponsors.map((sponsor, index) => (
-              <div
+              <button
                 key={index}
-                className="bg-card rounded-xl md:rounded-2xl shadow-card p-5 sm:p-6 border border-border hover:shadow-lg transition-shadow"
+                onClick={() => handleSponsorClick(sponsor)}
+                className="bg-card rounded-xl md:rounded-2xl shadow-card p-6 sm:p-8 border border-border hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer group"
               >
-                <div className="flex flex-col items-center text-center">
-                  <img
-                    src={sponsor.logo}
-                    alt={sponsor.name}
-                    className="h-16 sm:h-20 object-contain mb-4"
-                  />
-                  <h4 className="font-display text-lg text-foreground mb-2">
-                    {sponsor.name}
-                  </h4>
-                  <p className="text-muted-foreground text-sm mb-3">
-                    {sponsor.contact}
-                  </p>
-                  <div className="flex flex-col gap-2 text-sm">
-                    <a
-                      href={`tel:${sponsor.phone}`}
-                      className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <Phone className="w-4 h-4" />
-                      {sponsor.phone}
-                    </a>
-                    <a
-                      href={`mailto:${sponsor.email}`}
-                      className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <Mail className="w-4 h-4" />
-                      {sponsor.email}
-                    </a>
-                  </div>
-                </div>
-              </div>
+                <img
+                  src={sponsor.logo}
+                  alt={sponsor.name}
+                  className="h-20 sm:h-24 md:h-28 object-contain group-hover:opacity-90 transition-opacity"
+                />
+              </button>
             ))}
           </div>
         </div>
+
+        {/* Sponsor Details Modal */}
+        <Dialog open={!!selectedSponsor} onOpenChange={() => setSelectedSponsor(null)}>
+          <DialogContent className="sm:max-w-md">
+            <DialogHeader>
+              <DialogTitle className="text-center font-display text-xl">
+                {selectedSponsor?.name}
+              </DialogTitle>
+            </DialogHeader>
+            {selectedSponsor && (
+              <div className="flex flex-col items-center gap-6 py-4">
+                <img
+                  src={selectedSponsor.logo}
+                  alt={selectedSponsor.name}
+                  className="h-24 sm:h-32 object-contain"
+                />
+                <div className="flex flex-col gap-3 w-full">
+                  <div className="flex items-center gap-3 text-muted-foreground">
+                    <User className="w-5 h-5 text-primary" />
+                    <span>{selectedSponsor.contact}</span>
+                  </div>
+                  <a
+                    href={`tel:${selectedSponsor.phone}`}
+                    className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    <Phone className="w-5 h-5 text-primary" />
+                    <span>{selectedSponsor.phone}</span>
+                  </a>
+                  <a
+                    href={`mailto:${selectedSponsor.email}`}
+                    className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    <Mail className="w-5 h-5 text-primary" />
+                    <span>{selectedSponsor.email}</span>
+                  </a>
+                </div>
+              </div>
+            )}
+          </DialogContent>
+        </Dialog>
 
         {/* Sponsor Opportunity Card */}
         <div className="bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10 rounded-xl md:rounded-2xl p-5 sm:p-6 md:p-12 border-2 border-dashed border-primary/30 hover:border-primary/50 transition-all duration-300 group mb-8 md:mb-12">
