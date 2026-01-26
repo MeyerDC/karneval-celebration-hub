@@ -81,6 +81,8 @@ const translations: Record<Language, Record<string, string>> = {
     "sponsors.description": "Wir suchen lokale Unternehmen und Partner, die uns helfen, die Tradition des deutschen Karnevals am Leben zu erhalten. Werden Sie Teil unseres 40-jährigen Jubiläums!",
     "sponsors.partnership": "Interesse an einer Partnerschaft?",
     "sponsors.contact": "Kontaktieren Sie uns",
+    "sponsors.ourSponsors": "Unsere Sponsoren",
+    "sponsors.thankYou": "Vielen Dank an unsere großzügigen Unterstützer",
     
     // Footer
     "footer.about": "Seit 1986 bringen wir Freude und Gemeinschaft durch traditionellen deutschen Karneval zusammen.",
@@ -161,6 +163,8 @@ const translations: Record<Language, Record<string, string>> = {
     "sponsors.description": "We are looking for local businesses and partners to help us keep the tradition of German carnival alive. Become part of our 40th anniversary celebration!",
     "sponsors.partnership": "Interested in a partnership?",
     "sponsors.contact": "Contact us",
+    "sponsors.ourSponsors": "Our Sponsors",
+    "sponsors.thankYou": "Thank you to our generous supporters",
     
     // Footer
     "footer.about": "Since 1986, we bring joy and community together through traditional German carnival.",
