@@ -47,9 +47,9 @@ const translations: Record<Language, Record<string, string>> = {
     "schedule.feb13": "13. Februar",
     "schedule.feb14": "14. Februar",
     "schedule.buettenabend": "Büttenabend",
-    "schedule.buettenabend.desc": "German Evening – Einlass 18:30, Beginn 19:00",
+    "schedule.buettenabend.desc": "German Evening – Einlass 18:30, Beginn 19:11",
     "schedule.international": "International Evening",
-    "schedule.international.desc": "Internationale Feier – Einlass 18:30, Beginn 19:00",
+    "schedule.international.desc": "Internationale Feier – Einlass 18:30, Beginn 19:11",
     "schedule.time": "Uhr",
     
     // Event Info
@@ -129,9 +129,9 @@ const translations: Record<Language, Record<string, string>> = {
     "schedule.feb13": "February 13",
     "schedule.feb14": "February 14",
     "schedule.buettenabend": "Büttenabend",
-    "schedule.buettenabend.desc": "German Evening – Doors 18:30, Start 19:00",
+    "schedule.buettenabend.desc": "German Evening – Doors 18:30, Start 19:11",
     "schedule.international": "International Evening",
-    "schedule.international.desc": "International Celebration – Doors 18:30, Start 19:00",
+    "schedule.international.desc": "International Celebration – Doors 18:30, Start 19:11",
     "schedule.time": "",
     
     // Event Info
