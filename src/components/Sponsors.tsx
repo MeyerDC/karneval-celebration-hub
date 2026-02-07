@@ -8,6 +8,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import bravoplexLogo from "@/assets/sponsors/bravoplex415.jpg";
+import wmwspicesLogo from "@/assets/sponsors/wmwspices.jpg";
 
 interface Sponsor {
   name: string;
@@ -25,6 +26,14 @@ const sponsors: Sponsor[] = [
     contact: "Hennie de Jager",
     phone: "079 876 1784",
     email: "accounts@bravoplex415.co.za",
+  },
+  {
+    name: "WMW Spices",
+    logo: wmwspicesLogo,
+    contact: "",
+    phone: "",
+    email: "",
+    website: "https://wmwspices.co.za",
   },
 ];
 
