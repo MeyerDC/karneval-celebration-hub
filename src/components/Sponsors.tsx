@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/dialog";
 import bravoplexLogo from "@/assets/sponsors/bravoplex415.jpg";
 import wmwspicesLogo from "@/assets/sponsors/wmwspices.jpg";
+import lunasolLogo from "@/assets/sponsors/lunasol.jpg";
 
 interface Sponsor {
   name: string;
@@ -34,6 +35,14 @@ const sponsors: Sponsor[] = [
     phone: "",
     email: "",
     website: "https://wmwspices.co.za",
+  },
+  {
+    name: "LunaSol Holistic Wellness Day Spa",
+    logo: lunasolLogo,
+    contact: "",
+    phone: "",
+    email: "",
+    website: "https://instagram.com/lunasol.spa",
   },
 ];
 
