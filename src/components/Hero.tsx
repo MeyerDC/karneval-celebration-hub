@@ -51,9 +51,9 @@ const Hero = () => {
 
         {/* Main Title */}
         <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-none mb-4 md:mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-          <span className="text-foreground">Deutsche</span>
+          <span className="text-foreground">Deutscher</span>
           <br />
-          <span className="text-gradient-festival">Carneval Verein</span>
+          <span className="text-gradient-festival">Carnevals Verein</span>
         </h1>
 
         {/* Subtitle */}
