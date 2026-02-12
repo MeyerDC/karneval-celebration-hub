@@ -11,6 +11,7 @@ import bravoplexLogo from "@/assets/sponsors/bravoplex415.jpg";
 import wmwspicesLogo from "@/assets/sponsors/wmwspices.jpg";
 import lunasolLogo from "@/assets/sponsors/lunasol.jpg";
 import elandsheimLogo from "@/assets/sponsors/elandsheim.jpg";
+import hciskillsLogo from "@/assets/sponsors/hciskills.jpg";
 
 interface Sponsor {
   name: string;
@@ -52,6 +53,14 @@ const sponsors: Sponsor[] = [
     phone: "",
     email: "",
     website: "https://www.elandsheim.co.za",
+  },
+  {
+    name: "HCi Skills Development",
+    logo: hciskillsLogo,
+    contact: "",
+    phone: "",
+    email: "",
+    website: "https://www.hciskills.co.za",
   },
 ];
 
