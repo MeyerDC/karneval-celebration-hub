@@ -10,6 +10,7 @@ import {
 import bravoplexLogo from "@/assets/sponsors/bravoplex415.jpg";
 import wmwspicesLogo from "@/assets/sponsors/wmwspices.jpg";
 import lunasolLogo from "@/assets/sponsors/lunasol.jpg";
+import elandsheimLogo from "@/assets/sponsors/elandsheim.jpg";
 
 interface Sponsor {
   name: string;
@@ -43,6 +44,14 @@ const sponsors: Sponsor[] = [
     phone: "",
     email: "",
     website: "https://instagram.com/lunasol.spa",
+  },
+  {
+    name: "Elandsheim Guest Farm & Elandsview Guest House",
+    logo: elandsheimLogo,
+    contact: "",
+    phone: "",
+    email: "",
+    website: "https://www.elandsheim.co.za",
   },
 ];
 
